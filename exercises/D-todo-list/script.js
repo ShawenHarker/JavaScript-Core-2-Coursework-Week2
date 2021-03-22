@@ -21,18 +21,6 @@ function todoList(todosArr) {
 console.log(content);
 }
 
-
-
-
-// bnt1.forEach (function () {
-//   btn1.addEventListener('click', function (e) {
-//     createLi = e.target;
-//     if (createLi.style.backgroundColor === "lightgreen" && btn1.innerText === "Done") {
-//       createLi.style.backgroundColor= "red" && btn1.innerText === "Undo";
-//     }
-//   })
-// })
-
 const todos = [
   {todo: "wash the dishes"}, 
   {todo: "walk the dog"}, 
