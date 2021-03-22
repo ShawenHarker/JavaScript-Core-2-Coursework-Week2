@@ -1,4 +1,4 @@
-function todoList(todos) {
+function todoList(todosArr) {
   // Write your code here...
   let content = document.getElementById('content'); // getting the div tag by its Id in the HTML dom.
   let createUl = document.createElement('ul'); // creating a unordered list.
@@ -42,9 +42,15 @@ function todoList(todos) {
       if (createLi.style.backgroundColor === "lightgreen" && btn1.innerText === "Done") {
         createLi.style.backgroundColor= "red" && btn1.innerText === "Undo";
       }
-    })
+      else if (createLi.style.textDecoration === "line-through") {
+        createLi.style.textDecoration = "none";
+      }
+    }
+    createLi.addEventListener("click", strike)
   }
+console.log(content);
 }
+
 
 
 
