@@ -10,26 +10,27 @@ function listOfColours(coloursArr) {
    let chooseColourOfArray = coloursArr.filter ((colour) => {
     let option = document.createElement('option');
     option.textContent = colour;
+    option.value = colour;
     select.appendChild(option);
 
     function chooseColour () {
-      if (select[0] === 'red') {
-        p.style.color = 'red';
+      if (option.value === 'red') {
+        createPTag.style.color = 'red';
       }
-      else if (select[1] === 'blue') {
-        p.style.color = 'blue';
+      else if (option.value === 'blue') {
+        createPTag.style.color = 'blue';
       }
-      else if (select[2] === 'green') {
-        p.style.color = 'green';
+      else if (option.value === 'green') {
+        createPTag.style.color = 'green';
       }
-      else if (select[3] === 'yellow') {
-        p.style.color = 'yellow';
+      else if (option.value === 'yellow') {
+        createPTag.style.color = 'yellow';
       }
-      else if (select[4] === 'pink') {
-        p.style.color = 'pink';
+      else if (option.value === 'pink') {
+        createPTag.style.color = 'pink';
       }
-      else if (select[5] === 'brown') {
-        p.style.color = 'brown';
+      else if (option.value === 'brown') {
+        createPTag.style.color = 'brown';
       }
     }
     select.addEventListener('click', chooseColour);
