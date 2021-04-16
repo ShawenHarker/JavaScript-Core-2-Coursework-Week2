@@ -1,5 +1,26 @@
 function highlightWords(paragraph, colours) {
   // Write your code here...
+  let content = document.getElementById('content');
+  let selectMenu = document.createElement('select');
+  let pTag1 = document.createElement("p");
+  content.appendChild(pTag1);
+  pTag1.innerHTML = `Please select a colour `;
+  pTag1.setAttribute('class', 'paragraph')
+  selectMenu.setAttribute("id", "selectID");
+  pTag1.appendChild(selectMenu);
+
+  colours.map((col) => {
+  let option = document.createElement("option");
+  selectMenu.appendChild(option);
+  option.innerText = col;
+  })
+
+  let pTag = document.createElement('p');
+  content.appendChild(pTag);
+  pTag.innerHTML = paragraph.split(paragraph.indexOf(''));
+
+
+  console.log(content);
 }
 
 const paragraph =

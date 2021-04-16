@@ -150,6 +150,15 @@
  #greenBtn {
      background: #87ca8a
  }
+
+ #content {
+     padding: 1em;
+     text-align: center;
+ }
+
+.paragraph {
+     text-align: center;
+ }
  
  @media screen and (min-width: 992px) {
  
