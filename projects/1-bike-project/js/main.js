@@ -1,11 +1,17 @@
+/* Part 1
+
+ Getting targetted elements via their ids I inputted myself in the HTML.
+ */
 let jumbotron = document.getElementById("jumbotron-id");
 let donateButton = document.getElementById("btn btn-primary btn-lrg-id");
 let volunteerButton = document.getElementById("btn btn-secondary btn-lrg-id");
 
+// Getting the buttons with their ids which was supplied to me.
 let blueButton = document.getElementById("blueBtn");
 let orangeButton = document.getElementById("orangeBtn");
 let greenButton = document.getElementById("greenBtn");
 
+// Adding an event listener to each button as spicified in the README.md file, giving each button its own unique style. 
 blueButton.addEventListener('click', () => {
     jumbotron.style.backgroundColor = `#588fbd`;
     donateButton.style.backgroundColor = `#ffa500`;
@@ -26,3 +32,20 @@ greenButton.addEventListener("click", () => {
   volunteerButton.style.backgroundColor = `#8c9c08`;
   volunteerButton.style.color = "white";
 });
+
+//____________________________________________________________________//
+
+/* Part 2
+
+Getting targetted elements via their ids I inputted myself in the HTML.
+*/
+let emailBlock = document.getElementById("exampleInputEmail1");
+let nameBlock = document.getElementById("example-text-input");
+let textAreaBlock = document.getElementById("exampleTextarea");
+let submitButton = document.getElementById("btn btn-primary-id");
+
+console.log(submitButton);
+
+submitButton.addEventListener('click', () => {
+
+})
