@@ -39,13 +39,30 @@ greenButton.addEventListener("click", () => {
 
 Getting targetted elements via their ids I inputted myself in the HTML.
 */
-let emailBlock = document.getElementById("exampleInputEmail1");
-let nameBlock = document.getElementById("example-text-input");
-let textAreaBlock = document.getElementById("exampleTextarea");
-let submitButton = document.getElementById("btn btn-primary-id");
 
-console.log(submitButton);
+// This function takes the validate functions, checks that it does validate and returns an alert message or a red background warning.
+function submitForm (event) {
 
-submitButton.addEventListener('click', () => {
+  event.preventDefault();
+  event.stopPropagation();
 
-})
+  let returnForm = validate();
+
+  if (returnForm) {
+    document.getElementById('form-user').alert('Thank you for filing in the form.');
+  }
+  else {
+    document.getElementsByClassName('form-control').style.backgroundColor = 'red';
+  }
+}
+
+// This function checks and validates all the values of the different input fields
+function validate () {
+  let checkEmail = document.getElementById('exampleInputEmail1');
+  let checkName = document.getElementById('example-text-input');
+  let checkTextArea = document.getElementById('exampleTextarea');
+
+
+}
+
+document.getElementById('btn btn-primary-id').addEventListener('click', submitForm);
