@@ -62,7 +62,15 @@ function validate () {
   let checkName = document.getElementById('example-text-input');
   let checkTextArea = document.getElementById('exampleTextarea');
 
-
+  console.log(checkEmail);
+  if (checkEmail > 1) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 document.getElementById('btn btn-primary-id').addEventListener('click', submitForm);
+
+validate();
