@@ -152,10 +152,6 @@ body {
   background: #87ca8a;
 }
 
-.error {
-  background-color: rgba(255, 0, 0, 0.3);
-}
-
 @media screen and (min-width: 992px) {
   .navbar-brand > img {
     max-height: 80px;

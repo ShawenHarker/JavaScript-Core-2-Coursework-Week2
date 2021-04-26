@@ -40,7 +40,7 @@ greenButton.addEventListener("click", () => {
 Getting targetted elements via their ids I inputted myself in the HTML.
 */
 
-// This function takes the validate functions, checks that it does validate and returns an alert message or a red background warning.
+// This function takes the validate functions, checks that it does validate and returns an alert message or a red warning background.
 function submitForm(event) {
   event.preventDefault();
   event.stopPropagation();
@@ -68,6 +68,7 @@ function validate() {
   let emailInput = document.getElementById("exampleInputEmail1");
   let nameInput = document.getElementById("example-text-input");
   let textAreaInput = document.getElementById("exampleTextarea");
+  
   let inputs = {
     fields: {
       email: {
