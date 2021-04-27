@@ -61,6 +61,11 @@ function submitForm(event) {
       alert("Thank you for filing in the form.");
     }, 250);
   }
+  if (returnForm.allFieldsValid === false) {
+    setTimeout(() => {
+      alert("Opps!!! You need to fill in the correct info");
+    }, 250);
+  }
 }
 
 // This function checks and validates all the values of the different input fields
