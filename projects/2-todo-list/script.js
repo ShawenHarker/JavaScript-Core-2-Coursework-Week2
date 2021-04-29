@@ -31,25 +31,31 @@ function populateTodoList(todos) {
     listLiTag.innerText = todos[i].task;
     list.appendChild(listLiTag);
 
-    let checkButton = document.createElement('button');
-    checkButton.setAttribute('id', 'primary-done-button');
+    // Creating the check button.
+    let checkButton = document.createElement("button");
+    checkButton.setAttribute("id", "primary-done-button");
     listLiTag.appendChild(checkButton);
-    let checkSpanTag = document.createElement('span');
+    let divBlock = document.createElement('div');
+    listLiTag.appendChild(divBlock);
+    let checkSpanTag = document.createElement("span");
     checkSpanTag.setAttribute("class", "badge bg-primary rounded-pill-0");
-    let checkIbutton = document.createElement('i');
+    let checkIbutton = document.createElement("i");
     checkIbutton.setAttribute("class", "fa fa-check");
-    checkIbutton.setAttribute("aria-hidden", 'true');
+    checkIbutton.setAttribute("aria-hidden", "true");
+    divBlock.appendChild(checkButton);
     checkSpanTag.appendChild(checkIbutton);
     checkButton.appendChild(checkSpanTag);
 
+    // Creating the delete button.
     let deleteButton = document.createElement("button");
     deleteButton.setAttribute("id", "primary-delete-button");
     listLiTag.appendChild(deleteButton);
     let deleteSpanTag = document.createElement("span");
     deleteSpanTag.setAttribute("class", "badge bg-primary rounded-pill-1");
-    let deleteIbutton = document.createElement('i');
+    let deleteIbutton = document.createElement("i");
     deleteIbutton.setAttribute("class", "fa fa-trash");
     deleteIbutton.setAttribute("aria-hidden", "true");
+    divBlock.appendChild(deleteButton);
     deleteSpanTag.appendChild(deleteIbutton);
     deleteButton.appendChild(deleteSpanTag);
   }
