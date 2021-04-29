@@ -34,18 +34,22 @@ function populateTodoList(todos) {
     let checkButton = document.createElement('button');
     checkButton.setAttribute('id', 'primary-done-button');
     listLiTag.appendChild(checkButton);
-    let spanTag = document.createElement('span');
+    let checkSpanTag = document.createElement('span');
     let checkIbutton = document.createElement('i');
     checkIbutton.setAttribute("class", "fa fa-check");
     checkIbutton.setAttribute("aria-hidden", 'true');
-    spanTag.appendChild(checkIbutton);
-    checkButton.appendChild(spanTag);
+    checkSpanTag.appendChild(checkIbutton);
+    checkButton.appendChild(checkSpanTag);
 
     let deleteButton = document.createElement("button");
     deleteButton.setAttribute("id", "primary-delete-button");
     listLiTag.appendChild(deleteButton);
-    
-    deleteButton.textContent = "Delete";
+    let deleteSpanTag = document.createElement("span");
+    let deleteIbutton = document.createElement('i');
+    deleteIbutton.setAttribute("class", "fa fa-trash");
+    deleteIbutton.setAttribute("aria-hidden", "true");
+    deleteSpanTag.appendChild(deleteIbutton);
+    deleteButton.appendChild(deleteSpanTag);
   }
 }
 
