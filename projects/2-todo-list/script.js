@@ -12,12 +12,10 @@ function addNewTodo(event) {
   // Write your code here... and remember to reset the input field to be blank after creating a todo!
   
   let addToDo = document.getElementById("todoInput");
-  console.log(addToDo.value);
   addToDo.value = " ";
-  if (addToDo.value.length > 1) {
+  if (addToDo.length > 1) {
     todos.push({ task: `${addToDo.value}`, completed: false});
   }
-  
 }
 
 document.getElementById("btn-primary").addEventListener('click', addNewTodo);
@@ -28,11 +26,31 @@ function populateTodoList(todos) {
   for (let i = 0; i < todos.length; i++) {
     let listLiTag = document.createElement("li");
     listLiTag.setAttribute("class", "list-group-item");
-    list.appendChild(listLiTag);
     listLiTag.innerText = todos[i].task;
+    list.appendChild(listLiTag);
+    let checkButton = document.createElement('button');
+    checkButton.setAttribute('id', 'primary-done-button')
+    listLiTag.appendChild(checkButton);
+    checkButton.textContent = "Done";
+    console.log(checkButton);
+    let deleteButton = document.createElement("button");
+    deleteButton.setAttribute("id", "primary-delete-button");
+    listLiTag.appendChild(deleteButton);
+    deleteButton.textContent = "Delete";
   }
 }
+
 populateTodoList(todos);
+
+document.getElementById("primary-done-button").addEventListener('click', function () {
+  let listLiTag = document.getElementsByClassName("list-group-item");
+  if (listLiTag.style.textDecoration = "none") {
+    listLiTag.style.textDecoration = "lineThrough";
+  }
+  return listLiTag.style.textDecoration = "none";
+});
+
+
 
 // Advanced challenge: Write a fucntion that checks the todos in the todo list and deletes the completed ones (we can check which ones are completed by seeing if they have the line-through styling applied or not).
 function deleteAllCompletedTodos() {
