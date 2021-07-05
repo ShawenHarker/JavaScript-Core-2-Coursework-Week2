@@ -14,23 +14,6 @@ body {
   .list-group-item {
     display: flex;
     justify-content: space-between;
-  }
-
-  button {
-    padding: 0%;
-    margin: 0%;
-    border: none;
-  }
-
-  .rounded-pill-0,
-  .rounded-pill-1 {
-    border-radius: 0%;
-  }
-
-  .rounded-pill-0 {
-    border-radius: 50% 0px 0px 50%;
-  }
-
-  .rounded-pill-1 {
-    border-radius: 0px 50% 50% 0px;
+    align-items: center;
+    line-thr
   }
