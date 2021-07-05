@@ -8,16 +8,28 @@ let todos = [
   { task: "Do the shopping", completed: false },
 ];
 
+const addLineThrough = () => {
+  let getSpanWrapNone = document.getElementsByClassName("span-wrap-decoration-none");
+  let getSpanWrapLine = document.getElementsByClassName("span-wrap-decoration-line");
+
+  getSpanWrapNone ? getSpanWrapLine : getSpanWrapNone;
+}
+
+const getCheckBtn = document.getElementsByClassName("fa fa-check");
+getCheckBtn.addEventListener('click', addLineThrough());
+
 const createListElement = (element) => {
   let Li = document.createElement("li");
+  let spanWrap = document.createElement("span");
   let span = document.createElement("span");
   let checkBtn = document.createElement("i");
   let trashBtn = document.createElement("i");
-
-  Li.innerText = element.task;
-  Li.style.textDecoration = "none";
+  spanWrap.innerText = element.task;
+  console.log(Li);
 
   Li.setAttribute("class", "list-group-item");
+  spanWrap.setAttribute("class", "span-wrap-decoration-line");
+  spanWrap.setAttribute("class", "span-wrap-decoration-none");
   span.setAttribute("class", "badge bg-primary rounded-pill");
   checkBtn.setAttribute("class", "fa fa-check");
   checkBtn.setAttribute("aria-hidden", "true") 
@@ -25,20 +37,21 @@ const createListElement = (element) => {
   trashBtn.setAttribute("aria-hidden", "true");
 
   list.appendChild(Li);
+  Li.appendChild(spanWrap);
   Li.appendChild(span);
   span.appendChild(checkBtn);
   span.appendChild(trashBtn);
+
 }
 
 // This function creates my list of to-dos and display in on the screen.
 function populateTodoList(todos) {
-  todos.forEach((element) => createListElement(element)); 
+  todos.forEach(element => createListElement(element)); 
 }
 
 populateTodoList(todos);
 
 function addNewTodo(event) {
-  // The code below prevents the page from refreshing when we click the 'Add Todo' button.
   event.preventDefault();
   
   let addToDo = document.getElementById("todoInput");

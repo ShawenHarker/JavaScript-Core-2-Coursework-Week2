@@ -1,19 +1,26 @@
 body {
-    background-image: url(assets/world.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: auto 100%;
-  }
+  background-image: url(assets/world.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: auto 100%;
+}
 
-  .container {
-    margin-top: 150px;
-    width: 90%;
-  }
+.container {
+  margin-top: 150px;
+  width: 90%;
+}
 
-  .list-group-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    line-thr
-  }
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.span-wrap-decoration-line {
+  text-decoration: line-through;
+}
+
+.span-wrap-decoration-none {
+  text-decoration: none;
+}
